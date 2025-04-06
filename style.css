@@ -1,0 +1,175 @@
+@font-face {
+  font-family: "Auto-Mission"; /* Name of the font */
+  src: url("./fonts/Auto\ Mission.otf") format("otf"),
+    /* Modern browsers */ url("./fonts/Auto\ Mission.ttf") format("truetype"); /* Fallback */
+  font-weight: normal; /* Specify the font weight (optional) */
+  font-style: normal; /* Specify the font style (optional) */
+}
+
+@font-face {
+  font-family: "Lettera-Mono"; /* Name of the font */
+  src: url("/fonts/LetteraMonoLLTrialWeb-Light.woff2") format("woff2"),
+    url("./fonts/LetteraMonoTrial-Light.otf") format("otf"),
+    /* Modern browsers */ url("./fonts/LetteraMonoTrialTT-Light.ttf")
+      format("truetype"); /* Fallback */
+  font-weight: normal; /* Specify the font weight (optional) */
+  font-style: normal; /* Specify the font style (optional) */
+}
+
+#output {
+  color: transparent;
+}
+
+html,
+body,
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  overflow: hidden; /* Hides scrollbars */
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE */
+}
+main {
+  position: absolute;
+  padding: 8px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 0px; /* Optional: space between grid items */
+  height: 100vh;
+  width: 100vw;
+}
+
+.heading {
+  grid-column: 1 / 9;
+
+  color: #383838;
+  font-family: Auto-Mission;
+  font-size: 132px;
+
+  top: 0;
+  margin-top: 16px;
+
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.headingImg {
+  padding: 24px 24px 0 24px;
+  width: 97%; /* Makes the image stretch to fit */
+  height: 100%;
+  object-fit: cover;
+}
+
+h3,
+h4 {
+  font-family: Lettera-Mono;
+  color: #616161;
+}
+
+h3 {
+  font-size: 24px;
+  letter-spacing: 2.2%;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+p {
+  font-family: Lettera-Mono;
+  color: white;
+  font-size: 12px;
+  line-height: 1.9;
+}
+
+.binary {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+#left,
+#right {
+  height: 100%;
+}
+
+#left {
+  grid-column: 1 / 10;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  border: 1px solid #333;
+}
+
+#canvas-container {
+  position: absolute;
+  top: 0px;
+  right: 140px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center; /* Centers items horizontally */
+  align-items: center;
+}
+
+#defaultCanvas0 {
+  z-index: -1; /* Ensure p5 canvas is above the custom canvas */
+  width: 100%;
+  height: 100%;
+  background: transparent;
+}
+
+#right {
+  grid-column: 10 / 13;
+
+  display: flex; /* Enable Flexbox */
+  flex-direction: column; /* Arrange items vertically */
+  /* height: 100vh; */
+
+  margin-right: 8px;
+}
+
+.one,
+.two,
+.three {
+  flex: 1;
+  padding: 16px;
+  overflow-y: auto; /* Enable vertical scrolling */
+  max-height: 33vh;
+}
+
+.one {
+  background-color: #262626;
+}
+
+.two {
+  background-color: #222222;
+}
+
+.three {
+  width: 100%;
+  background-color: #1b1b1b;
+}
+
+.three p {
+  word-wrap: break-word;
+  width: 100%;
+}
+
+#connectButton {
+  font-family: Lettera-Mono;
+  position: absolute;
+  top: 8px;
+}
+
+.three p {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
